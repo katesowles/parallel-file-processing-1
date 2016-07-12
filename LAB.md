@@ -1,36 +1,27 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) Parallel File Processing
 ===
 
-##To Submit this Assignment
-  * fork this repository
-  * do your work against your repository
-  * when done submit a pull request to this repository/yourname branch
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
-
 ## Resources
 * [Node fs docs](https://nodejs.org/api/fs.html)
 
 ##Description:
-This assignment will have you create a Javascript module that takes a
-list of filenames and retrieves the first byte of each file
-_in parallel_, but returning the results as an array in the same order
+This assignment will have you create a json file persistence JavaScript 
+module that takes an array of relative or absolute file paths and returns an array of javascript object deserliazed 
+from each file in the directory.
+
+This should happen _in parallel_, while still returning the results as an array in the same order
 as the list of files that were provided. 
 
-Make sure you test with larger files later in the order to force the
-order issue.
+You need to have tests that verify the results.  Make sure you test with an diretly different 
+file order than another test to ensure results are in correct order.
 
-You need to have tests that verify the results.  
+Standard repository artifacts should be influded.
 
-Use package.json. Lint, include your .eslint
-
-Your submission should be a link to your pull request.  
-
-##Bonus:
-For one extra point, create a command line utility that will be 
-run using node and can accept a directory and output the filename 
-and first byte results to the screen using the module you created 
-in the main part of the assignment.
+##Bonus **2pts**
+export CLI that wraps the above functionality by accepting two params:
+* directory to list of json files
+* output filename
+And then writes serialized JSON of object array.
 
 ```sh
 > node index.js ./files
