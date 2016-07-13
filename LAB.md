@@ -1,48 +1,33 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) Parallel File Processing
 ===
 
-##To Submit this Assignment
-  * fork this repository
-  * do your work against your repository
-  * when done submit a pull request to this repository/yourname branch
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
-
 ## Resources
 * [Node fs docs](https://nodejs.org/api/fs.html)
 
 ##Description:
-This assignment will have you create a Javascript module that takes a
-list of filenames and retrieves the first byte of each file
-_in parallel_, but returning the results as an array in the same order
-as the list of files that were provided. 
+This assignment will have you create an object store using json files and the file system.
 
-Make sure you test with larger files later in the order to force the
-order issue.
+Your file store should:
+* Live under a central directory configurable and startup
+* Store objects by "type" under a folder
+* Store each object into a file using
+    * An identifier for the file name
+    * JSON to serialize the object
+* Support the following API calls:
+    * Retrieve all objects of a given type
+    * Retrieve an array of objects from an array id's in same order
+    * Store an object (returns id if already part of object)
 
-You need to have tests that verify the results.  
+API calls should be implemented _in parallel_ when possible.
 
-Use package.json. Lint, include your .eslint
+You need to have tests that verify the results.  Make sure you test file order with a test
+that explcitly has a different than another test.
 
-Your submission should be a link to your pull request.  
-
-##Bonus:
-For one extra point, create a command line utility that will be 
-run using node and can accept a directory and output the filename 
-and first byte results to the screen using the module you created 
-in the main part of the assignment.
-
-```sh
-> node index.js ./files
-file-01 4e3rek22
-file-02 0dj4nsnc
-file-03 999fdke3
-```
+Standard repository/dev stuff: README, package.json, travis-ci, tests, meaningful commits, named npm scripts, etc.
 
 ##Rubric:
 
-  * Proper Styling: 2pts
-  * Proper Submission: 2pts
-  * Files in parallel: 2pts
-  * Preserve order: 2pts
-  * Tests: 2pts
+  * Functional Correct Behavior (including paralellism): 3pts
+  * Async coding style: 2pts
+  * Project (Module) Organization: 2pts
+  * Tests: 3pts
