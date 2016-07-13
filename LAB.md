@@ -5,35 +5,29 @@
 * [Node fs docs](https://nodejs.org/api/fs.html)
 
 ##Description:
-This assignment will have you create a json file persistence JavaScript 
-module that takes an array of relative or absolute file paths and returns an array of javascript object deserliazed 
-from each file in the directory.
+This assignment will have you create an object store using json files and the file system.
 
-This should happen _in parallel_, while still returning the results as an array in the same order
-as the list of files that were provided. 
+Your file store should:
+* Live under a central directory configurable and startup
+* Store objects by "type" under a folder
+* Store each object into a file using
+    * An identifier for the file name
+    * JSON to serialize the object
+* Support the following API calls:
+    * Retrieve all objects of a given type
+    * Retrieve an array of objects from an array id's in same order
+    * Store an object (returns id if already part of object)
 
-You need to have tests that verify the results.  Make sure you test with an diretly different 
-file order than another test to ensure results are in correct order.
+API calls should be implemented _in parallel_ when possible.
 
-Standard repository artifacts should be influded.
+You need to have tests that verify the results.  Make sure you test file order with a test
+that explcitly has a different than another test.
 
-##Bonus **2pts**
-export CLI that wraps the above functionality by accepting two params:
-* directory to list of json files
-* output filename
-And then writes serialized JSON of object array.
-
-```sh
-> node index.js ./files
-file-01 4e3rek22
-file-02 0dj4nsnc
-file-03 999fdke3
-```
+Standard repository/dev stuff: README, package.json, travis-ci, tests, meaningful commits, named npm scripts, etc.
 
 ##Rubric:
 
-  * Proper Styling: 2pts
-  * Proper Submission: 2pts
-  * Files in parallel: 2pts
-  * Preserve order: 2pts
-  * Tests: 2pts
+  * Functional Correct Behavior (including paralellism): 3pts
+  * Async coding style: 2pts
+  * Project (Module) Organization: 2pts
+  * Tests: 3pts
