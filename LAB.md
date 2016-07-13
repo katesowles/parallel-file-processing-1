@@ -10,7 +10,7 @@ and [parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 This assignment will have you create an object store using json files and the file system.
 
 Your file store should:
-* Live under a central directory configurable and startup
+* Live under a central directory configurable at startup
 * Store objects by "type" under a folder
 * Store each object into a file using
     * An identifier for the file name
