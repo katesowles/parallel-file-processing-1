@@ -3,6 +3,8 @@
 
 ## Resources
 * [Node fs docs](https://nodejs.org/api/fs.html)
+* JSON [stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 
+and [parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 
 ##Description:
 This assignment will have you create an object store using json files and the file system.
