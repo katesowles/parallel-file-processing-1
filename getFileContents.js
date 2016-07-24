@@ -15,7 +15,6 @@ function getFileContents (folder, files, callback) {
         contentSet.push(contents);
       }
       callback(output);
-      // callback3(callback4);
     });
   });
 }

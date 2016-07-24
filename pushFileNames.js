@@ -8,7 +8,6 @@ function pushFileNames (folder, files, callback) {
     results.push(names);
   });
   callback(folder, files, matchFileContents);
-  // callback2(folder, files, callback3, callback4);
 }
 
 module.exports = pushFileNames;

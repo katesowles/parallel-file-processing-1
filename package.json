@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha",
+    "start": "node index.js text",
+    "watch": "mocha -w"
   },
   "author": "",
   "license": "ISC",

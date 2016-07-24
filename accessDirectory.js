@@ -8,7 +8,6 @@ function accessDirectory (folder, callback) {
     }
     else {
       callback(folder, files, getFileContents);
-      // callback(folder, files, callback2, callback3, callback4);
     }
   });
 }
