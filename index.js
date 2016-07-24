@@ -1,5 +1,5 @@
-const accessDirectory = require('./accessDirectory');
-const pushFileNames = require('./pushFileNames');
+const accessDirectory = require('./lib/accessDirectory');
+const pushFileNames = require('./lib/pushFileNames');
 
 function start (folder, callback) {
   accessDirectory(folder, pushFileNames);

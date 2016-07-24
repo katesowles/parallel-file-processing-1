@@ -1,7 +1,6 @@
 const assert = require('chai').assert;
 const start = require('../index').start;
-const results = require('../global').results;
-
+const results = require('../lib/global').results;
 
 describe ('text folder', () => {
   // process.argv[2] = 'text';
