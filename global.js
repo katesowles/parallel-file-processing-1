@@ -1,6 +1,6 @@
 const contentSet = [];
 const results = [];
-let names = [];
+var names = [];
 let complete = false;
 
 exports.contentSet = contentSet;
