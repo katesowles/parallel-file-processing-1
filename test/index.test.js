@@ -20,21 +20,21 @@ describe ('text folder', () => {
     });
   });
 
-  // it ('does the file content match the filename?', (done) => {
-  //   retrieveSortFiles(__dirname + '/test-dir/text', (err, content) => {
-  //     console.log('error: ', err);
-  //     if (err) throw err;
-  //     console.log('content', content);
-  //     for (var i = 0; i < content.length; i++) {
-  //       let filename = content[i].name.split('.')[0].toLowerCase();
-  //       let filecontent = content[i].contents.split(' ')[0].toLowerCase();
-  //       console.log('filename   ', filename);
-  //       console.log('filecontent', filecontent);
-  //       assert.equal(filecontent, filename, 'the first word of your file contents doesn\'t match the file name, try again');
-  //     }
-  //     done();
-  //   });
-  // });
+  it ('does the file content match the filename?', (done) => {
+    retrieveSortFiles(__dirname + '/test-dir/text', (err, content) => {
+      console.log('error: ', err);
+      if (err) throw err;
+      console.log('content', content);
+      for (var i = 0; i < content.length; i++) {
+        let filename = content[i].name.split('.')[0].toLowerCase();
+        let filecontent = content[i].contents.split(' ')[0].toLowerCase();
+        console.log('filename   ', filename);
+        console.log('filecontent', filecontent);
+        assert.equal(filecontent, filename, 'the first word of your file contents doesn\'t match the file name, try again');
+      }
+      done();
+    });
+  });
 });
 
 describe ('people folder', () => {
@@ -54,17 +54,17 @@ describe ('people folder', () => {
     });
   });
 
-  // it ('does the file content match the filename?', (done) => {
-  //   retrieveSortFiles(__dirname + '/test-dir/people', (err, content) => {
-  //     console.log('error: ', err);
-  //     if (err) throw err;
-  //     console.log('content', content);
-  //     for (var i = 0; i < content.length; i++) {
-  //       let filename = content[i].name.split('.')[0].toLowerCase();
-  //       let filecontent = content[i].contents.split(' ')[0].toLowerCase();
-  //       assert.equal(filecontent, filename, 'the first word of your file contents doesn\'t match the file name, try again');
-  //     }
-  //     done();
-  //   });
-  // });
+  it ('does the file content match the filename?', (done) => {
+    retrieveSortFiles(__dirname + '/test-dir/people', (err, content) => {
+      console.log('error: ', err);
+      if (err) throw err;
+      console.log('content', content);
+      for (var i = 0; i < content.length; i++) {
+        let filename = content[i].name.split('.')[0].toLowerCase();
+        let filecontent = content[i].contents.split(' ')[0].toLowerCase();
+        assert.equal(filecontent, filename, 'the first word of your file contents doesn\'t match the file name, try again');
+      }
+      done();
+    });
+  });
 });
