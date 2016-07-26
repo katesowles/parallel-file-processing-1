@@ -1,18 +1,32 @@
 {
-  "name": "parallel-file-processing",
+  "name": "parallel-file-processing-1",
   "version": "1.0.0",
+  "description": "#### How to use:",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha",
-    "start": "node index.js text",
-    "watch": "mocha -w"
+  "directories": {
+    "test": "test"
   },
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "description": "",
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3"
-  }
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js /test/test-dir/text",
+    "startText": "node index.js /test/test-dir/text",
+    "startPeople": "node index.js /test/test-dir/people",
+    "watch": "eslint mocha -w",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katesowles/parallel-file-processing-1.git"
+  },
+  "author": "Kate Sowles <katesowles@gmail.com> (http://katesowles.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katesowles/parallel-file-processing-1/issues"
+  },
+  "homepage": "https://github.com/katesowles/parallel-file-processing-1#readme"
 }

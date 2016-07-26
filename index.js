@@ -1,13 +1,8 @@
-const accessDirectory = require('./lib/accessDirectory');
-const pushFileNames = require('./lib/pushFileNames');
+const retrieveSortFiles = require('./lib/retrieveSortFiles');
 
-function start (folder, callback) {
-  accessDirectory(folder, pushFileNames);
-  if (callback != undefined) {
-    callback();
+retrieveSortFiles(__dirname + process.argv[2], (err,content) => {
+  if (err) console.error(err);
+  else {
+    console.log('ALL DONE', content);
   }
-}
-
-start(process.argv[2]);
-
-exports.start = start;
+});
